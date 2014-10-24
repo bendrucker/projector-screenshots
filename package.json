@@ -12,5 +12,9 @@
   "bugs": {
     "url": "https://github.com/bendrucker/projector-screenshots/issues"
   },
-  "homepage": "https://github.com/bendrucker/projector-screenshots"
+  "homepage": "https://github.com/bendrucker/projector-screenshots",
+  "dependencies": {
+    "bluebird": "2",
+    "phantomjs": "1.9"
+  }
 }
