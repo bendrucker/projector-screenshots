@@ -15,6 +15,6 @@
   "homepage": "https://github.com/bendrucker/projector-screenshots",
   "dependencies": {
     "bluebird": "2",
-    "phantomjs": "1.9"
+    "wd": "~0.3.9"
   }
 }

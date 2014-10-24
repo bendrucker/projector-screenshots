@@ -1,14 +1,19 @@
 'use strict';
 
-var path         = require('path');
-var childProcess = require('child_process');
-var phantomjs    = require('phantomjs');
+var Promise   = require('bluebird');
+var wd        = require('wd');
+var asserters = wd.asserters;
+var browser   = wd.promiseChainRemote();
 
-childProcess.spawn(phantomjs.path, [
-  path.join(__dirname, 'script.js'),
-  process.env.PLEDGES_PATH,
-  process.env.PROJECTOR_URL
-],
-{
-  stdio: 'inherit'
-});
+Promise
+  .resolve(require(process.env.PLEDGES_PATH))
+  .tap(function () {
+    return browser
+      .init({browserName: 'chrome'})
+      .setWindowSize(1440, 900)
+      .get(process.env.PROJECTOR_URL)
+      .waitForElementByCss('.loading-indicator', asserters.isNotDisplayed, 5000);
+  })
+  .bind(browser)
+  .finally(browser.quit);
+
