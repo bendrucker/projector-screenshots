@@ -1,0 +1,16 @@
+{
+  "name": "projector-screenshots",
+  "version": "1.0.0",
+  "description": "Generate screenshots of every donor on screen using PhantomJS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/projector-screenshots.git"
+  },
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/projector-screenshots/issues"
+  },
+  "homepage": "https://github.com/bendrucker/projector-screenshots"
+}
