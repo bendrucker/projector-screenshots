@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/bendrucker/projector-screenshots",
   "dependencies": {
-    "bluebird": "2",
-    "change-case": "~2.1.5",
-    "wd": "~0.3.9"
+    "bluebird": "^3.5.3",
+    "change-case": "~3.0.2",
+    "wd": "~1.11.0"
   }
 }
